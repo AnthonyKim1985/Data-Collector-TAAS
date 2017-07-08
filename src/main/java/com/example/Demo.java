@@ -16,13 +16,14 @@ import java.util.List;
 
 /**
  * Created by Anthony Jinhyuk Kim on 2017-07-05.
+ * @Author Anthony Jinhyuk Kim, Jong-Seon Jang
  */
 public class Demo {
     public static void main(String[] args) throws Exception {
         final String targetUrl = "http://taas.koroad.or.kr/gis/srh/ash/selectAccidentInfo.do";
 
-        for (int year = 2007; year <= 2016; year += 3) {
-            final String fileName = String.format("result/%dto%d.csv", year, year + 2);
+        for (int year = 2007; year <= 2016; year++) {
+            final String fileName = String.format("result/%d.csv", year);
             write(fileName, getHeader());
 
             System.out.println(fileName + " Started.");
@@ -34,14 +35,14 @@ public class Demo {
     }
 
     private static String getHeader() {
-        return "acdnt_no,engn_code,acdnt_year,acdnt_dd_dc,dfk_code,dfk_dc,tmzon_div_1_code,tmzon_div_1_dc,occrrnc_time_code,occrrnc_time_dc,legaldong_code,legaldong_name,acdnt_hcode,acdnt_hdc,acdnt_mcode,acdnt_mdc,acdnt_code,acdnt_dc,lrg_violt_1_code,lrg_violt_1_dc,x_crdnt,y_crdnt,wether_sttus_code,wether_sttus_dc,road_stle_code,road_stle_dc,hhdgw_at,acdnt_gae_code,acdnt_gae_dc,dprs_cnt,sep_cnt,slp_cnt,inj_aplcnt_cnt,wrngdo_vhcle_asort_hcode,wrngdo_vhcle_asort_hdc,wrngdo_vhcle_asort_code,wrngdo_vhcle_asort_dc,injury_dgree_1_hcode,injury_dgree_1_hdc,injury_dgree_1_code,injury_dgree_1_dc,acdnt_age_1_code,acdnt_age_1_dc,sexdstn_div_1_code,sexdstn_div_1_dc,dmge_vhcle_asort_hcode,dmge_vhcle_asort_hdc,dmge_vhcle_asort_code,dmge_vhcle_asort_dc,injury_dgree_2_hcode,injury_dgree_2_hdc,injury_dgree_2_code,injury_dgree_2_dc,acdnt_age_2_code,acdnt_age_2_dc,sexdstn_div_2_code,sexdstn_div_2_dc,spt_otlnmap_at,rdse_sttus_code,rdse_sttus_dc,acdnt_pos,acdnt_des,road_div,road_no,route_nm,otn_acdnt_no,city_idt_code,city_idt_dc,xCrdnt,yCrdnt,acdnt_frm_lv1,acdnt_frm_lv2,acdnt_frm_lv3,acdnt_sta_lv1,acdnt_sta_lv2,searchCondition,pageIndex,recordCountPerPage,searchConditionText,searchKeyword,pageUnit,zoneYn\r\n";
+        return "acdnt_no,engn_code,acdnt_year,acdnt_dd_dc,dfk_code,dfk_dc,tmzon_div_1_code,tmzon_div_1_dc,occrrnc_time_code,occrrnc_time_dc,legaldong_code,legaldong_name,acdnt_hcode,acdnt_hdc,acdnt_mcode,acdnt_mdc,acdnt_code,acdnt_dc,lrg_violt_1_code,lrg_violt_1_dc,x_crdnt,y_crdnt,wether_sttus_code,wether_sttus_dc,road_stle_code,road_stle_dc,hhdgw_at,acdnt_gae_code,acdnt_gae_dc,dprs_cnt,sep_cnt,slp_cnt,inj_aplcnt_cnt,wrngdo_vhcle_asort_hcode,wrngdo_vhcle_asort_hdc,wrngdo_vhcle_asort_code,wrngdo_vhcle_asort_dc,injury_dgree_1_hcode,injury_dgree_1_hdc,injury_dgree_1_code,injury_dgree_1_dc,acdnt_age_1_code,acdnt_age_1_dc,sexdstn_div_1_code,sexdstn_div_1_dc,dmge_vhcle_asort_hcode,dmge_vhcle_asort_hdc,dmge_vhcle_asort_code,dmge_vhcle_asort_dc,injury_dgree_2_hcode,injury_dgree_2_hdc,injury_dgree_2_code,injury_dgree_2_dc,acdnt_age_2_code,acdnt_age_2_dc,sexdstn_div_2_code,sexdstn_div_2_dc,spt_otlnmap_at,rdse_sttus_code,rdse_sttus_dc,acdnt_pos,acdnt_des,road_div,road_no,route_nm,otn_acdnt_no,city_idt_code,city_idt_dc,xCrdnt,yCrdnt,acdnt_frm_lv1,acdnt_frm_lv2,acdnt_frm_lv3,acdnt_sta_lv1,acdnt_sta_lv2\r\n";
     }
 
     private static int writeResultValue(String targetUrl, String fileName, int year, int pageIndex) throws Exception {
         HttpURLConnection httpURLConnection = getHttpURLConnection(targetUrl);
 
         Gson gson = new Gson();
-        sendJson(httpURLConnection, pageIndex, year, year + 1);
+        sendJson(httpURLConnection, pageIndex, year, year);
         String json = receiveJson(httpURLConnection);
         ResultValue resultValue = gson.fromJson(json, Taas.class).getResultValue();
 
@@ -56,9 +57,9 @@ public class Demo {
         return Integer.parseInt(resultValue.getPaginationInfo().getLastPageNo());
     }
 
-    private static void write(String fileName, String json) throws Exception {
+    private static void write(String fileName, String text) throws Exception {
         try (FileWriter fileWriter = new FileWriter(fileName, true)) {
-            fileWriter.write(json);
+            fileWriter.write(text);
             fileWriter.flush();
         }
     }

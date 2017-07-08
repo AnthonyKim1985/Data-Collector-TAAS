@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Created by Anthony Jinhyuk Kim on 2017-07-05.
+ * @Author Anthony Jinhyuk Kim, Jong-Seon Jang
  */
 @Data
 @NoArgsConstructor

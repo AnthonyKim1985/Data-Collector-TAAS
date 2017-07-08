@@ -8,6 +8,7 @@ import java.io.Serializable;
 
 /**
  * Created by Anthony Jinhyuk Kim on 2017-07-05.
+ * @Author Anthony Jinhyuk Kim, Jong-Seon Jang
  */
 @EqualsAndHashCode
 @NoArgsConstructor
@@ -99,87 +100,87 @@ public class AccidentInfo implements Serializable {
 
     @Override
     public String toString() {
-        return acdnt_no + "," +
-                engn_code + "," +
-                acdnt_year + "," +
-                acdnt_dd_dc + "," +
-                dfk_code + "," +
-                dfk_dc + "," +
-                tmzon_div_1_code + "," +
-                tmzon_div_1_dc + "," +
-                occrrnc_time_code + "," +
-                occrrnc_time_dc + "," +
-                legaldong_code + "," +
-                legaldong_name + "," +
-                acdnt_hcode + "," +
-                acdnt_hdc + "," +
-                acdnt_mcode + "," +
-                acdnt_mdc + "," +
-                acdnt_code + "," +
-                acdnt_dc + "," +
-                lrg_violt_1_code + "," +
-                lrg_violt_1_dc + "," +
-                x_crdnt + "," +
-                y_crdnt + "," +
-                wether_sttus_code + "," +
-                wether_sttus_dc + "," +
-                road_stle_code + "," +
-                road_stle_dc + "," +
-                hhdgw_at + "," +
-                acdnt_gae_code + "," +
-                acdnt_gae_dc + "," +
-                dprs_cnt + "," +
-                sep_cnt + "," +
-                slp_cnt + "," +
-                inj_aplcnt_cnt + "," +
-                wrngdo_vhcle_asort_hcode + "," +
-                wrngdo_vhcle_asort_hdc + "," +
-                wrngdo_vhcle_asort_code + "," +
-                wrngdo_vhcle_asort_dc + "," +
-                injury_dgree_1_hcode + "," +
-                injury_dgree_1_hdc + "," +
-                injury_dgree_1_code + "," +
-                injury_dgree_1_dc + "," +
-                acdnt_age_1_code + "," +
-                acdnt_age_1_dc + "," +
-                sexdstn_div_1_code + "," +
-                sexdstn_div_1_dc + "," +
-                dmge_vhcle_asort_hcode + "," +
-                dmge_vhcle_asort_hdc + "," +
-                dmge_vhcle_asort_code + "," +
-                dmge_vhcle_asort_dc + "," +
-                injury_dgree_2_hcode + "," +
-                injury_dgree_2_hdc + "," +
-                injury_dgree_2_code + "," +
-                injury_dgree_2_dc + "," +
-                acdnt_age_2_code + "," +
-                acdnt_age_2_dc + "," +
-                sexdstn_div_2_code + "," +
-                sexdstn_div_2_dc + "," +
-                spt_otlnmap_at + "," +
-                rdse_sttus_code + "," +
-                rdse_sttus_dc + "," +
-                acdnt_pos + "," +
-                acdnt_des + "," +
-                road_div + "," +
-                road_no + "," +
-                route_nm + "," +
-                otn_acdnt_no + "," +
-                city_idt_code + "," +
-                city_idt_dc + "," +
-                xCrdnt + "," +
-                yCrdnt + "," +
-                acdnt_frm_lv1 + "," +
-                acdnt_frm_lv2 + "," +
-                acdnt_frm_lv3 + "," +
-                acdnt_sta_lv1 + "," +
-                acdnt_sta_lv2 + "," +
-                searchCondition + "," +
-                pageIndex + "," +
-                recordCountPerPage + "," +
-                searchConditionText + "," +
-                searchKeyword + "," +
-                pageUnit + "," +
-                zoneYn + "\r\n";
+        return (acdnt_no == null ? null : acdnt_no.replaceAll("[,]", "")) + "," +
+                (engn_code == null ? null : engn_code.replaceAll("[,]", "")) + "," +
+                (acdnt_year == null ? null : acdnt_year.replaceAll("[,]", "")) + "," +
+                (acdnt_dd_dc == null ? null : acdnt_dd_dc.replaceAll("[,]", "")) + "," +
+                (dfk_code == null ? null : dfk_code.replaceAll("[,]", "")) + "," +
+                (dfk_dc == null ? null : dfk_dc.replaceAll("[,]", "")) + "," +
+                (tmzon_div_1_code == null ? null : tmzon_div_1_code.replaceAll("[,]", "")) + "," +
+                (tmzon_div_1_dc == null ? null : tmzon_div_1_dc.replaceAll("[,]", "")) + "," +
+                (occrrnc_time_code == null ? null : occrrnc_time_code.replaceAll("[,]", "")) + "," +
+                (occrrnc_time_dc == null ? null : occrrnc_time_dc.replaceAll("[,]", "")) + "," +
+                (legaldong_code == null ? null : legaldong_code.replaceAll("[,]", "")) + "," +
+                (legaldong_name == null ? null : legaldong_name.replaceAll("[,]", "")) + "," +
+                (acdnt_hcode == null ? null : acdnt_hcode.replaceAll("[,]", "")) + "," +
+                (acdnt_hdc == null ? null : acdnt_hdc.replaceAll("[,]", "")) + "," +
+                (acdnt_mcode == null ? null : acdnt_mcode.replaceAll("[,]", "")) + "," +
+                (acdnt_mdc == null ? null : acdnt_mdc.replaceAll("[,]", "")) + "," +
+                (acdnt_code == null ? null : acdnt_code.replaceAll("[,]", "")) + "," +
+                (acdnt_dc == null ? null : acdnt_dc.replaceAll("[,]", "")) + "," +
+                (lrg_violt_1_code == null ? null : lrg_violt_1_code.replaceAll("[,]", "")) + "," +
+                (lrg_violt_1_dc == null ? null : lrg_violt_1_dc.replaceAll("[,]", "")) + "," +
+                (x_crdnt == null ? null : x_crdnt.replaceAll("[,]", "")) + "," +
+                (y_crdnt == null ? null : y_crdnt.replaceAll("[,]", "")) + "," +
+                (wether_sttus_code == null ? null : wether_sttus_code.replaceAll("[,]", "")) + "," +
+                (wether_sttus_dc == null ? null : wether_sttus_dc.replaceAll("[,]", "")) + "," +
+                (road_stle_code == null ? null : road_stle_code.replaceAll("[,]", "")) + "," +
+                (road_stle_dc == null ? null : road_stle_dc.replaceAll("[,]", "")) + "," +
+                (hhdgw_at == null ? null : hhdgw_at.replaceAll("[,]", "")) + "," +
+                (acdnt_gae_code == null ? null : acdnt_gae_code.replaceAll("[,]", "")) + "," +
+                (acdnt_gae_dc == null ? null : acdnt_gae_dc.replaceAll("[,]", "")) + "," +
+                (dprs_cnt == null ? null : dprs_cnt.replaceAll("[,]", "")) + "," +
+                (sep_cnt == null ? null : sep_cnt.replaceAll("[,]", "")) + "," +
+                (slp_cnt == null ? null : slp_cnt.replaceAll("[,]", "")) + "," +
+                (inj_aplcnt_cnt == null ? null : inj_aplcnt_cnt.replaceAll("[,]", "")) + "," +
+                (wrngdo_vhcle_asort_hcode == null ? null : wrngdo_vhcle_asort_hcode.replaceAll("[,]", "")) + "," +
+                (wrngdo_vhcle_asort_hdc == null ? null : wrngdo_vhcle_asort_hdc.replaceAll("[,]", "")) + "," +
+                (wrngdo_vhcle_asort_code == null ? null : wrngdo_vhcle_asort_code.replaceAll("[,]", "")) + "," +
+                (wrngdo_vhcle_asort_dc == null ? null : wrngdo_vhcle_asort_dc.replaceAll("[,]", "")) + "," +
+                (injury_dgree_1_hcode == null ? null : injury_dgree_1_hcode.replaceAll("[,]", "")) + "," +
+                (injury_dgree_1_hdc == null ? null : injury_dgree_1_hdc.replaceAll("[,]", "")) + "," +
+                (injury_dgree_1_code == null ? null : injury_dgree_1_code.replaceAll("[,]", "")) + "," +
+                (injury_dgree_1_dc == null ? null : injury_dgree_1_dc.replaceAll("[,]", "")) + "," +
+                (acdnt_age_1_code == null ? null : acdnt_age_1_code.replaceAll("[,]", "")) + "," +
+                (acdnt_age_1_dc == null ? null : acdnt_age_1_dc.replaceAll("[,]", "")) + "," +
+                (sexdstn_div_1_code == null ? null : sexdstn_div_1_code.replaceAll("[,]", "")) + "," +
+                (sexdstn_div_1_dc == null ? null : sexdstn_div_1_dc.replaceAll("[,]", "")) + "," +
+                (dmge_vhcle_asort_hcode == null ? null : dmge_vhcle_asort_hcode.replaceAll("[,]", "")) + "," +
+                (dmge_vhcle_asort_hdc == null ? null : dmge_vhcle_asort_hdc.replaceAll("[,]", "")) + "," +
+                (dmge_vhcle_asort_code == null ? null : dmge_vhcle_asort_code.replaceAll("[,]", "")) + "," +
+                (dmge_vhcle_asort_dc == null ? null : dmge_vhcle_asort_dc.replaceAll("[,]", "")) + "," +
+                (injury_dgree_2_hcode == null ? null : injury_dgree_2_hcode.replaceAll("[,]", "")) + "," +
+                (injury_dgree_2_hdc == null ? null : injury_dgree_2_hdc.replaceAll("[,]", "")) + "," +
+                (injury_dgree_2_code == null ? null : injury_dgree_2_code.replaceAll("[,]", "")) + "," +
+                (injury_dgree_2_dc == null ? null : injury_dgree_2_dc.replaceAll("[,]", "")) + "," +
+                (acdnt_age_2_code == null ? null : acdnt_age_2_code.replaceAll("[,]", "")) + "," +
+                (acdnt_age_2_dc == null ? null : acdnt_age_2_dc.replaceAll("[,]", "")) + "," +
+                (sexdstn_div_2_code == null ? null : sexdstn_div_2_code.replaceAll("[,]", "")) + "," +
+                (sexdstn_div_2_dc == null ? null : sexdstn_div_2_dc.replaceAll("[,]", "")) + "," +
+                (spt_otlnmap_at == null ? null : spt_otlnmap_at.replaceAll("[,]", "")) + "," +
+                (rdse_sttus_code == null ? null : rdse_sttus_code.replaceAll("[,]", "")) + "," +
+                (rdse_sttus_dc == null ? null : rdse_sttus_dc.replaceAll("[,]", "")) + "," +
+                (acdnt_pos == null ? null : acdnt_pos.replaceAll("[,]", "")) + "," +
+                (acdnt_des == null ? null : acdnt_des.replaceAll("[,]", "")) + "," +
+                (road_div == null ? null : road_div.replaceAll("[,]", "")) + "," +
+                (road_no == null ? null : road_no.replaceAll("[,]", "")) + "," +
+                (route_nm == null ? null : route_nm.replaceAll("[,]", "")) + "," +
+                (otn_acdnt_no == null ? null : otn_acdnt_no.replaceAll("[,]", "")) + "," +
+                (city_idt_code == null ? null : city_idt_code.replaceAll("[,]", "")) + "," +
+                (city_idt_dc == null ? null : city_idt_dc.replaceAll("[,]", "")) + "," +
+                (xCrdnt == null ? null : xCrdnt.replaceAll("[,]", "")) + "," +
+                (yCrdnt == null ? null : yCrdnt.replaceAll("[,]", "")) + "," +
+                (acdnt_frm_lv1 == null ? null : acdnt_frm_lv1.replaceAll("[,]", "")) + "," +
+                (acdnt_frm_lv2 == null ? null : acdnt_frm_lv2.replaceAll("[,]", "")) + "," +
+                (acdnt_frm_lv3 == null ? null : acdnt_frm_lv3.replaceAll("[,]", "")) + "," +
+                (acdnt_sta_lv1 == null ? null : acdnt_sta_lv1.replaceAll("[,]", "")) + "," +
+                (acdnt_sta_lv2 == null ? null : acdnt_sta_lv2.replaceAll("[,]", "")) + "," +
+                (searchCondition == null ? null : searchCondition.replaceAll("[,]", "")) + "," +
+                (pageIndex == null ? null : pageIndex.replaceAll("[,]", "")) + "," +
+                (recordCountPerPage == null ? null : recordCountPerPage.replaceAll("[,]", "")) + "," +
+                (searchConditionText == null ? null : searchConditionText.replaceAll("[,]", "")) + "," +
+                (searchKeyword == null ? null : searchKeyword.replaceAll("[,]", "")) + "," +
+                (pageUnit == null ? null : pageUnit.replaceAll("[,]", "")) + "," +
+                (zoneYn == null ? null : zoneYn.replaceAll("[,]", "")) + "\r\n";
     }
 }
